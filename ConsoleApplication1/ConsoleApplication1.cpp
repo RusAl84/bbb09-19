@@ -16,7 +16,7 @@ class SberBank
 
     protected:
         int balance;
-        int* pbb;
+        double* pbb;
         void add100() {
             balance = balance + 101;
         }
@@ -26,7 +26,7 @@ class SberBank
         void sub_x(int xx) { balance = balance - xx; }
 
     public:
-        float procent;
+        double procent;
 
         B d[3];
         void add(int xx) {
@@ -39,12 +39,12 @@ class SberBank
         void view() { cout << "Balance: "<< balance << endl; }
         void sub(int xx) { balance = balance - xx - int(xx * procent); }
         void f1() {
-            *pbb = 10000;
+            *pbb = -10000.0;
         }
         SberBank() {
             balance = 0;
             procent = 0.015;
-            pbb = &balance;
+            pbb = &procent;
         }
 
 };
@@ -62,7 +62,8 @@ int main()
     pA->procent = -15;
     pA->sub(100);
     pA->view();
-    pA->f1;
+    pA->f1();
+    pA->sub(100);
     pA->view();
    // pA->f3();
    // pA->f4();
