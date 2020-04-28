@@ -45,6 +45,7 @@ class A
             balance = 0;
             procent = 0.015;
             pbb = &procent;
+
         }
 
 };
