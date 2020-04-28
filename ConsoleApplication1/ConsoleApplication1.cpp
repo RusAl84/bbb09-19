@@ -17,6 +17,7 @@ class A
     protected:
         int balance;
         double* pbb;
+        char mas[5][3];
         void add100() {
             balance = balance + 101;
         }
@@ -24,28 +25,25 @@ class A
     private:
         void add_x(int xx) { balance = balance + xx; }
         void sub_x(int xx) { balance = balance - xx; }
-
+        double size_pen_krip;
     public:
         double procent;
 
         B d[3];
-        void add(int xx) {
-            if (xx == 100) {
-                add100();
-            }
-            else
-                add_x(xx);
+        void prishepit(int xx) {
+            size_pen_krip = size_pen_krip - xx;
+
         }
         void view() { cout << "Balance: "<< balance << endl; }
         void sub(int xx) { balance = balance - xx - int(xx * procent); }
-        void f1() {
-            *pbb = -10000.0;
+        void dostat_pen() {
+            cout << "Size of Pen: " << size_pen_krip << endl;
         }
         A() {
             balance = 0;
             procent = 0.015;
             pbb = &procent;
-
+            size_pen_krip = 17.0;
         }
 
 };
@@ -53,19 +51,11 @@ class A
 
 int main()
 {
-    A* pA = new A();
-   // pA->f2();
-    pA->view();
-    pA->add(500);
-    pA->view();
-    pA->sub(300);
-    pA->view();
-    pA->procent = -15;
-    pA->sub(100);
-    pA->view();
-    pA->f1();
-    pA->sub(100);
-    pA->view();
+    A  cA;
+    cA.view();
+    cA.dostat_pen();
+    cA.prishepit(7.5);
+    cA.dostat_pen();
    // pA->f3();
    // pA->f4();
 
