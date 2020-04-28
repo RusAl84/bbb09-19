@@ -11,7 +11,7 @@ public:
 };
 
 
-class SberBank
+class A
 {
 
     protected:
@@ -41,7 +41,7 @@ class SberBank
         void f1() {
             *pbb = -10000.0;
         }
-        SberBank() {
+        A() {
             balance = 0;
             procent = 0.015;
             pbb = &procent;
@@ -52,7 +52,7 @@ class SberBank
 
 int main()
 {
-    SberBank* pA = new SberBank();
+    A* pA = new A();
    // pA->f2();
     pA->view();
     pA->add(500);
